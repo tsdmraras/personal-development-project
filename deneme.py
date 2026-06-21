@@ -5,6 +5,12 @@
 #4. kullanıcıların gün içerisinde yapmayı planladıkları aktiviteleri kaydedebilmesi.
 #5. kaydedilen verileri bir llm aracı ile analiz ederek gelecekte neler yapılması gerektiğini planlayabilmesi.
 
+
+import sqlite3
+
+connection = sqlite3.connect("wellness.db")
+cursor = connection.cursor()
+connection.close()
 water_cons_metric = int(input("bugün içtiğin su miktarını bardak cinsinden giriniz: "))
 
 daily_metrics = {
